@@ -10,7 +10,7 @@ COMPATIBILITY:
 # UnCSS will use these settings
 UNCSS_OPTIONS:
   html:
-    - "src/**/*.html"
+    - "dist/**/*.html"
   ignore:
     - !!js/regexp .foundation-mq
     - !!js/regexp ^\.is-.*
@@ -19,7 +19,6 @@ UNCSS_OPTIONS:
 PATHS:
   # Path to dist folder
   dist: "dist"  
-  style: "dist/styleguide"
   styleSrc:
     - "src/assets/styles/**/*.scss"
   # Paths to static assets that aren't images, CSS, or JavaScript

@@ -8,9 +8,8 @@ To use this boilerplate, your computer needs:
 ### Setup
 
 - Clone this repository
-- Navigate to the project folder and run `npm install`
-- Run `npm link`
-- Run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
+- Navigate to the project folder and run `yarn`
+- Run `yarn start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
 
 ```
 http://localhost:8000
