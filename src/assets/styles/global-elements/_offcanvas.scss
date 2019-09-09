@@ -1,0 +1,58 @@
+$offcanvas-background: $black;
+$offcanvas-background-opacity: 0.8;
+$offcanvas-links-color: $white;
+$offcanvas-text-color: $white;
+
+//remove scrollbars when off-canvas menu is opened
+html,
+body {
+    overflow-x: hidden;
+}
+
+//off-canvas content
+.off-canvas {
+    background: rgba($offcanvas-background, $offcanvas-background-opacity);
+    color: $offcanvas-text-color;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    padding: rem-calc(80 0 20);
+
+    //color of the links 
+    a:link,
+    a:visited {
+        color: $offcanvas-links-color;
+    }
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    //menu
+    .menu {
+        a {
+            padding: 0;
+        }
+    }
+
+
+    //close button
+    .close-button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        top: initial;
+        @include closeButton();
+    }
+}
+
+.off-canvas.is-transition-overlap {
+    z-index: 999;
+}

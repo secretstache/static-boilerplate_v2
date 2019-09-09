@@ -1,0 +1,31 @@
+<div class="module video{{#if classes}} {{classes}}{{/if}}">
+
+    {{#if src}}
+        <div class="responsive-embed widescreen">
+            <iframe width="1730" height="692" src="{{src}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    {{else}}
+
+        <div class="video-wrapper">
+            <div class="play-button"></div>
+
+            <video>
+                <source src="{{root}}assets/video/PlaceholderVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    {{/if}}
+
+    {{#ifequal option "transcript"}}
+        <button class="transcript-toggle" data-toggle="transcript12345">View full transcript of video +</button>
+
+        <div class="transcript-text" id="transcript12345" data-toggler=".expanded">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium repudiandae exercitationem nesciunt cum beatae blanditiis veniam, sed harum recusandae magni, omnis esse deserunt mollitia doloribus voluptatibus maxime distinctio sint? Nobis.</p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium repudiandae exercitationem nesciunt cum beatae blanditiis veniam, sed harum recusandae magni, omnis esse deserunt mollitia doloribus voluptatibus maxime distinctio sint? Nobis.</p>
+
+        </div>
+    {{/ifequal}}
+
+</div>

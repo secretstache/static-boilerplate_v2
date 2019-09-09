@@ -1,0 +1,15 @@
+// colors
+
+// Typography
+$primary-font-family: sans-serif;
+$primary-font-color: $black;
+$reverse-font-color: $white;
+$headings-font-family: $primary-font-family;
+
+// Utility
+$max-width: 1140; //no units
+$base-padding: rem-calc(100);
+$base-margin: rem-calc(100);
+$module-margin: rem-calc(30);
+$module-padding: rem-calc(30);
+$outer-bg-color: $white;

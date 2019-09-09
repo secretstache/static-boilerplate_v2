@@ -1,0 +1,8 @@
+<a href="{{root}}index.html">
+    {{#if common.logo }}
+        <img src="{{root}}{{common.logo}}" alt="{{common.brandname}}" class="editable-svg" />
+    {{/if}}
+    {{#unless common.logo}}
+        <p>{{common.brandname}}</p>
+    {{/unless}}
+</a>

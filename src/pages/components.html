@@ -1,0 +1,136 @@
+---
+meta_title: Components
+---
+
+<!--
+	hero_unit_option: bg_image|bg_color
+	hero_unit_bg_image: "/assets/images/cms/{{image.jpg}}"
+	hero_unit_bg_color: bg-{{color}}
+-->
+
+<section class="content-block template-columns">
+    <div class="grid-container">
+
+        {{> section-header headline="The Section Header" subheadline="The Section Subheadline" classes="align-center" }}
+
+        <div class="grid-x grid-margin-x has-2-cols align-center has-2-cols">
+            <div class="cell small-11 medium-6">
+                <div class="inner">
+                    {{> header headline="Column One Header" }} {{> text-editor }}
+                </div>
+            </div>
+            <div class="cell small-11 medium-6">
+                <div class="inner">
+                    {{> figure }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-block template-columns">
+    <div class="grid-container">
+        {{> section-header headline="Block grid header"}}
+
+        <div class="grid-x grid-margin-x align-center has-3-cols">
+            <div class="cell small-11 medium-12">
+
+                {{#> block-grid }}
+                    {{#repeat 6}}
+                        <div class="cell small-12 medium-4">
+                            <img src="{{root}}assets/images/cms/placeholder.jpg" alt="">
+                        </div>
+                    {{/repeat}}
+                    {{/block-grid}}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-block template-columns">
+    <div class="grid-container">
+        {{> section-header headline="Carousel"}}
+
+        <div class="grid-x grid-margin-x align-center has-1-cols">
+            <div class="cell small-11 medium-12">
+                {{>carousel}}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-block template-columns">
+    <div class="grid-container">
+        {{> section-header headline="Slideshow"}}
+
+        <div class="grid-x grid-margin-x align-center has-1-cols">
+            <div class="cell small-11 medium-12">
+                <div class="inner">
+                    {{>carousel slides=1}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-block template-columns">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-center has-1-cols">
+            <div class="cell small-11 medium-12">
+                <div class="inner">
+                    {{> header headline="All of the modules" classes="stack-order-1"}}
+
+                    {{#> text-editor }}
+                        <p>text-editor module</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet dolor in laoreet interdum. Sed id mi vel velit hendrerit finibus ut id est. Vestibulum condimentum dui ipsum, ac malesuada sem imperdiet non. Quisque varius
+                            magna non tortor dapibus molestie. Aenean tincidunt sem sit amet odio vehicula aliquam. Vivamus fringilla vehicula justo, vitae fringilla diam bibendum a. Donec convallis erat sed tellus convallis condimentum.</p>
+                        {{/text-editor}}
+
+                        {{{ buttons classes="template1 template2" labels="Button module, Button module" urls="destination.html, test.html"}}}
+
+                        <!--   
+                        note: If not parameters are passed we can have defaults for quickly building templates
+                        -->
+                        {{> figure }} {{> video src="https://www.youtube.com/embed/02J5A3r-Bdk" classes="youtube" }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-block template-columns">
+    <div class="grid-container">
+
+        {{> section-header headline="A 3 Column Section Headline" classes="align-center" }}
+
+        <div class="grid-x grid-margin-x align-center has-3-cols">
+            <div class="cell small-11 medium-4">
+                <div class="inner">
+                    {{> text-editor}}
+                </div>
+            </div>
+            <div class="cell small-11 medium-4">
+                <div class="inner">
+                    {{> text-editor}}
+                </div>
+            </div>
+            <div class="cell small-11 medium-4">
+                <div class="inner">
+                    {{> text-editor}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-block template-columns">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-center has-1-cols">
+            <div class="cell small-11 medium-12">
+                <div class="inner">
+                    {{> form}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

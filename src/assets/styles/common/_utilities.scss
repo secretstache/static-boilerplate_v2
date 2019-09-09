@@ -1,0 +1,77 @@
+.pull-top {
+    margin-top: 0 !important;
+
+    [class^="bg-"]+&[class^="bg-"],
+    [class*="bg-"]+&[class*="bg-"] {
+        padding-top: 0 !important;
+    }
+}
+
+.pull-bottom {
+    margin-bottom: 0 !important;
+
+    +[class^="bg-"],
+    +[class*="bg-"] {
+        margin-top: 0 !important;
+    }
+
+    [class^="bg-"]+&[class^="bg-"],
+    [class*="bg-"]+&[class*="bg-"] {
+        padding-bottom: 0 !important;
+    }
+}
+
+.pull-vert {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+
+    +[class^="bg-"],
+    +[class*="bg-"] {
+        margin-top: 0 !important;
+    }
+
+    &[class^="bg-"],
+    &[class*="bg-"] {
+        @include responsive-padding("vert", $base-padding * 2);
+    }
+}
+
+.collapse-vert {
+    margin-top: 0 !important;
+
+    &[class^="bg-"],
+    &[class*="bg-"] {
+        @include responsive-margin("top");
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    +[class^="bg-"].collapse-vert,
+    +[class*="bg-"].collapse-vert {
+        margin-top: 0 !important;
+    }
+}
+
+.push-vert {
+    @include responsive-margin("vert", $base-margin * 2, 0.2, 'true');
+
+    &[class^="bg-"],
+    &[class*="bg-"] {
+        @include responsive-padding("vert", $base-padding * 2, 0.2, 'true');
+    }
+}
+
+.bg-dark {
+    color: $white;
+
+    label,
+    a {
+        color: $white;
+    }
+}
+
+.bg-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

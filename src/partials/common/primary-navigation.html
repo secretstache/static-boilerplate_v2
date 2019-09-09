@@ -1,0 +1,16 @@
+<ul class="dropdown menu show-for-large" data-dropdown-menu>
+    {{#each common.primary-navigation}}
+        <li class="menu-item {{#ifpage link}} current-menu-item{{/ifpage}}{{#if classes}} {{classes}}{{/if}}">
+            <a href="{{root}}{{link}}">{{text}}</a>
+            {{#if submenu }}
+                <ul class="submenu menu">
+                    {{#each submenu-items}}
+                        <li class="menu-item {{#ifpage link}} current-menu-item{{/ifpage}}{{#if classes}} {{classes}}{{/if}}">
+                            <a href="{{root}}{{submenu-link}}">{{submenu-text}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+        </li>
+    {{/each}}
+</ul>

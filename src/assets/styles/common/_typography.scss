@@ -1,0 +1,48 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-bottom: 0;
+    font-family: $headings-font-family;
+}
+
+h1 {
+    @include responsive-type(46, 34);
+}
+
+h2 {
+    @include responsive-type(36, 27);
+}
+
+h3 {
+    @include responsive-type(30, 24);
+}
+
+h4 {
+    @include responsive-type(28, 22);
+}
+
+h5 {
+    @include responsive-type(27, 20);
+}
+
+h6 {
+    @include responsive-type(22, 18);
+}
+
+p {
+    line-height: inherit;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+
+    &+ol,
+    &+ul,
+    &+h2,
+    &+h3,
+    &+h4 {
+        margin-top: rem-calc(20);
+    }
+}

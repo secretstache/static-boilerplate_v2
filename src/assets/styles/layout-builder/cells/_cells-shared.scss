@@ -1,0 +1,9 @@
+section.content-block {
+    .cell {
+
+        &[class^="bg-"],
+        &[class*="bg-"] {
+            @include responsive-padding('all', $module-padding);
+        }
+    }
+}

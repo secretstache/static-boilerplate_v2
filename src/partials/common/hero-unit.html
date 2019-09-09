@@ -1,0 +1,35 @@
+<section class="hero-unit{{#ifequal hero_unit_option 'bg_color'}} bg-{{hero_unit_bg_color}}{{/ifequal}}{{#ifequal hero_unit_option 'bg_image'}} bg-image{{/ifequal}} {{#ifequal hero_unit_option 'bg_video'}} bg-video{{/ifequal}} {{hero_classes}}{{#if show_hero_unit_scroll_down_button }} has-scroll-button{{/if}}" {{#ifequal hero_unit_option 'bg_image'}} style="background-image: url({{hero_unit_bg_image}})" {{/ifequal}}>
+    {{#ifequal hero_unit_option 'bg_image'}}
+        <div class="overlay"></div>
+    {{/ifequal}}
+
+    {{#ifequal hero_unit_option 'bg_video'}}
+        <div class="overlay"></div>
+    {{/ifequal}}
+
+    {{#ifequal hero_unit_option 'bg_video'}}
+        <div class="video-overlay">
+            <video muted autoplay playsinline loop>
+                <source src="{{root}}assets/video/PlaceholderVideo.mp4" type="video/mp4">
+            </video>
+        </div>
+    {{/ifequal}}
+
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-center">
+            <div class="cell small-11 medium-12">
+                <header class="module stack-order-1">
+                    <h1 class="headline">{{{hero_unit_headline}}}</h1>
+                    {{#if hero_unit_subheadline }}
+                        <h2 class="subheadline">{{{hero_unit_subheadline}}}</h2>
+                    {{/if}}
+                </header>
+                {{#if show_hero_unit_text }}
+                    {{#>text-editor}}
+                        {{{show_hero_unit_text}}}
+                        {{/text-editor}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

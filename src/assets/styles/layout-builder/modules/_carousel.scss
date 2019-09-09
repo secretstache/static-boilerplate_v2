@@ -1,0 +1,51 @@
+// styleguide:ignore:start
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+// styleguide:ignore:end
+
+.slick-arrow {
+  width: rem-calc(35);
+  height: rem-calc(47);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  font-size: 0;
+  cursor: pointer;
+  z-index: 10;
+  top: 50%;
+  margin-top: rem-calc(-18);
+}
+
+.slick-prev {
+  left: 0;
+  background-image: url(../images/carousel-prev.svg);
+
+  @include breakpoint(1395) {
+    left: rem-calc(-50);
+  }
+}
+
+.slick-next {
+  right: 0;
+  background-image: url(../images/carousel-next.svg);
+
+  @include breakpoint(1395) {
+    right: rem-calc(-50);
+  }
+}
+
+.slick-slide {
+  margin: rem-calc(0 15);
+}
+
+
+.slick-list {
+  margin: rem-calc(0 -15);
+}
+
+.carousel-item {
+  img {
+    display: block;
+    width: 100%;
+  }
+}

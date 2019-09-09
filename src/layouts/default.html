@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ydh2mdi.css">
+    <link rel="stylesheet" href="{{root}}assets/styles/main.css">
+
+</head>
+
+<body {{#if body_classes}} class="{{body_classes}}" {{/if}}>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="off-canvas-wrapper">
+        {{> offcanvas}}
+
+        <div class="off-canvas-content" data-off-canvas-content role="main">
+
+            {{> site-header}}
+
+            <main class="content" id="main">
+                {{#if show_hero_unit }}
+                    {{> hero-unit}}
+                {{/if}}
+
+                {{> body}}
+            </main>
+            {{> footer}}
+        </div>
+    </div>
+
+    <script src="{{root}}assets/scripts/main.js"></script>
+</body>
+
+</html>

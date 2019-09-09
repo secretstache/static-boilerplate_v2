@@ -1,0 +1,15 @@
+<div class="off-canvas" id="offCanvas" data-off-canvas data-transition="overlap">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-center">
+            <div class="cell small-11 medium-12">
+                <ul class="vertical menu">
+                    {{#each common.primary-navigation}}
+                        <li {{#if classes}}class="{{classes}}" {{/if}}><a href="{{root}}{{link}}">{{text}}</a></li>
+                    {{/each}}
+                </ul>
+
+                <button class="close-button off-canvas-close" data-toggle="offCanvas"></button>
+            </div>
+        </div>
+    </div>
+</div>

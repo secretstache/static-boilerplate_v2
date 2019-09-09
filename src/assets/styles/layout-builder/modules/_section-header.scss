@@ -1,0 +1,13 @@
+header.section-header {
+    @include responsive-margin("bottom", $module-margin * 2);
+
+    &.align-center {
+        text-align: center;
+    }
+
+    .headline {
+        span {
+            display: block;
+        }
+    }
+}

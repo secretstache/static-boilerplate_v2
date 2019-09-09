@@ -1,0 +1,11 @@
+header.module {
+    &.align-center {
+        text-align: center;
+    }
+
+    .headline {
+        span {
+            display: block;
+        }
+    }
+}

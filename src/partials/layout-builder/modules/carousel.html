@@ -1,0 +1,25 @@
+<div class="carousel{{#if classes}} {{classes}}{{/if}}" data-slick='{
+    "slidesToShow": {{#if slides}}{{slides}}{{/if}} {{#unless slides}}4{{/unless}}, 
+    "slidesToScroll": 1, 
+    "autoplay": true, 
+    "responsive":[
+        {
+            "breakpoint": 600,
+            "settings":{
+                "slidesToShow": {{#if slides}}{{slides}}{{/if}} {{#unless slides}}3{{/unless}}
+            }
+        },
+        {
+            "breakpoint": 480,
+            "settings":{
+                "slidesToShow": {{#if slides}}{{slides}}{{/if}} {{#unless slides}}1{{/unless}}
+            }
+        }
+    ]
+}'>
+    {{#repeat 10}}
+    <div class="carousel-item">
+        <img src="{{root}}assets/images/cms/placeholder.jpg" alt="">
+    </div>
+    {{/repeat}}
+</div>

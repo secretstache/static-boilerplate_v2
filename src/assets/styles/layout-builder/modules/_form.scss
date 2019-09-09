@@ -1,0 +1,71 @@
+.module.form {
+
+    [type='text'],
+    [type='password'],
+    [type='date'],
+    [type='datetime'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='email'],
+    [type='number'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='url'],
+    [type='color'],
+    textarea {
+
+        &:focus {}
+
+        &::placeholder {
+            color: $primary-font-color;
+        }
+    }
+
+    textarea {
+        height: auto;
+    }
+
+    //style input type="file"
+    .input-file {
+        opacity: 0;
+
+        input[type="file"] {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+
+            +label {
+                display: block;
+                cursor: pointer;
+                width: 100%;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            &:focus+label,
+            +label:hover {
+                background-color: $black;
+                color: $white;
+            }
+
+            &:focus+label {
+                outline: 1px dotted #000;
+                outline: -webkit-focus-ring-color auto 5px;
+            }
+
+            +label * {
+                pointer-events: none;
+            }
+        }
+    }
+
+    .gform_wrapper {
+        margin: 0;
+    }
+}

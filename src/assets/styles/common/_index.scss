@@ -1,0 +1,66 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    background: $outer-bg-color;
+    font-family: $primary-font-family;
+    margin: 0;
+    color: $primary-font-color;
+    font-weight: normal;
+    font-size: rem-calc(16);
+    line-height: 1.6;
+}
+
+a {
+    color: $primary-font-color;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $primary-font-color;
+    }
+}
+
+a.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-main:focus,
+a.skip-main:active {
+    color: #fff;
+    background-color: #000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    padding: 5px;
+    border-radius: 15px;
+    border: 4px solid yellow;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 9999;
+}
+
+.dropdown.menu>li>a,
+.menu .active>a {
+    background: inherit;
+    color: inherit;
+}

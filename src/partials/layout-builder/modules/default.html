@@ -1,0 +1,10 @@
+<div class="module default{{#if classes}} {{classes}}{{/if}}">
+
+    {{#if @partial-block}}
+        {{> @partial-block }}
+    {{/if}}
+
+    {{#unless @partial-block}}
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet dolor in laoreet interdum. Sed id mi vel velit hendrerit finibus ut id est. Vestibulum condimentum dui ipsum, ac malesuada sem imperdiet non. Quisque varius magna non tortor dapibus molestie. Aenean tincidunt sem sit amet odio vehicula aliquam.</p>
+    {{/unless}}
+</div>

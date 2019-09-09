@@ -1,0 +1,18 @@
+{
+    "indent_size": 4,
+    "indent_char": " ",
+    "css": {
+        "allowed_file_extensions": ["css", "scss", "sass", "less"],
+        "indent_size": 4,
+        "preserve_newlines": true,
+        "max_preserve_newlines": 3
+    },
+    "preserve_newlines": true,
+    "max_preserve_newlines": 4,
+    "extra_liners": ["head", "body", "/html", "section"],
+    "indent_body_inner_html": true,
+    "indent_handlebars": true,
+    "indent_scripts": "keep",
+    "wrap_attributes": "preserve",
+    "brace_style": "none,preserve-inline"
+}
