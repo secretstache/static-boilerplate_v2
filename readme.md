@@ -9,6 +9,7 @@ To use this boilerplate, your computer needs:
 
 - Clone this repository
 - Navigate to the project folder and run `yarn`
+- Run `npm link`
 - Run `yarn start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
 
 ```
@@ -19,17 +20,17 @@ To create compressed, production-ready assets, run `npm run build`.
 
 ### Generator
 
-- To add a new component run `ssm create-component componentName` or `ssm create componentName`. This command will create the files in the following folders:
-   `/src/assets/scripts/layout-builder/components/componentName.js`
-   `/src/assets/styles/layout-builder/components/_componentName.scss`
-   `/src/partials/layout-builder/components/componentName.html`
+- To add a new module run `ssm create-module moduleName` or `ssm create moduleName`. This command will create the files in the following folders:
+   `/src/assets/scripts/layout-builder/modules/moduleName.js`
+   `/src/assets/styles/layout-builder/modules/_moduleName.scss`
+   `/src/partials/layout-builder/modules/moduleName.html`
 
-- `ssm create-component componentName -j` will create all component's files except js file
-- `ssm create-component componentName -c` will create all component's files except scss file
-- `ssm create-component componentName -h` will create all component's files except html file
-- Flags can be combined, for example `ssm create-component componentName -j -h` will create only scss file
+- `ssm create-module moduleName -j` will create all module's files except js file
+- `ssm create-module moduleName -c` will create all module's files except scss file
+- `ssm create-module moduleName -h` will create all module's files except html file
+- Flags can be combined, for example `ssm create-module moduleName -j -h` will create only scss file
 
-- To delete component's files run `ssm remove-component componentName` or `ssm remove componentName`. 
+- To delete module's files run `ssm remove-module moduleName` or `ssm remove moduleName`. 
 
 - To add a new template run `ssm create-template templateName`. This command will create the files in the following folders:
 

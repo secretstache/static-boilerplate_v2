@@ -28,11 +28,36 @@
                         </div>
                     </li>
                     <li class="gfield half-width input-file">
-                        <label class="gfield_label" for="upload_resume">Upload file</label>
+                        <label class="gfield_label" for="idlabel5">Upload file</label>
                         <div class="ginput_container ginput_container_fileupload">
-                            <input name="upload_resume" id="upload_resume" type="file">
+                            <input id="idlabel5" type="file">
                         </div>
                     </li>
+                    <li class="gfield field_sublabel_below field_description_above half-width">
+                        <label class="gfield_label" for="idlabel6">Date</label>
+                        <div class="gfield_description">Pick a date</div>
+                        <div class="ginput_container ginput_container_date">
+                            <input id="idlabel6" type="text" class="datepicker mdy datepicker_with_icon hasDatepicker">
+                            <img class="ui-datepicker-trigger" src="https://image.flaticon.com/icons/svg/4/4430.svg" alt="" title="">
+                        </div>
+                    </li>
+                    <li class="gfield half-width">
+                        <label class="gfield_label" for="idlabel7">Contact</label>
+                        <div class="ginput_container ginput_container_select">
+                            <select name="input_11" id="idlabel7" class="gfield_select">
+                                <option value="" selected="selected" class="gf_placeholder">Location</option>
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="gfield">
+                            <label class="gfield_label" for="idlabel8">Your Comments/Quesitons<span class="gfield_required">*</span></label>
+                            <div class="ginput_container ginput_container_textarea">
+                                <textarea id="idlabel8" class="textarea" placeholder="Please share any comments or questions you may have for us." rows="10" cols="50">
+                                </textarea>
+                            </div>
+                        </li>
                 </ul>
             </div>
 

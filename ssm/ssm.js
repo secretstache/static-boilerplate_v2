@@ -25,31 +25,31 @@ program
     .usage('[command] [options] \n         Command without flags will be started in interactive mode.');
 
 program
-    .command('create-component <componentName>')
+    .command('create-module <moduleName>')
     .alias('create')
-    .description('Add component to components directory')
-    .option('-j, --js', 'Add component without .js')
-    .option('-c, --scss', 'Add component without scss')
-    .option('-h, --html', 'Add component without html')
-    .action((componentName, options) => {require('./lib/add-component')(componentName, options);});
+    .description('Add module')
+    .option('-j, --js', 'Add module without .js')
+    .option('-c, --scss', 'Add module without scss')
+    .option('-h, --html', 'Add module without html')
+    .action((moduleName, options) => { require('./lib/add-module')(moduleName, options); });
 
 program
-    .command('create-template <componentName>')
-    .description('Add component to components directory')
-    .option('-j, --js', 'Add component without .js')
-    .option('-c, --scss', 'Add component without scss')
-    .option('-h, --html', 'Add component without html')
-    .action((componentName, options) => {require('./lib/add-template')(componentName, options);});
+    .command('create-template <templateName>')
+    .description('Add template')
+    .option('-j, --js', 'Add template without .js')
+    .option('-c, --scss', 'Add template without scss')
+    .option('-h, --html', 'Add template without html')
+    .action((templateName, options) => { require('./lib/add-template')(templateName, options); });
 
 program
-    .command('remove-component <componentName>')
+    .command('remove-module <moduleName>')
     .alias('remove')
-    .description('Delete component from components directory')
-    .action((componentName) => {require('./lib/delete-component')(componentName);});
+    .description('Delete module from modules directory')
+    .action((moduleName) => { require('./lib/delete-module')(moduleName); });
 
 program
-    .command('remove-template <componentName>')
-    .description('Delete component from components directory')
-    .action((componentName) => {require('./lib/delete-template')(componentName);});
+    .command('remove-template <templateName>')
+    .description('Delete template')
+    .action((templateName) => { require('./lib/delete-template')(templateName); });
 
 program.parse(process.argv);

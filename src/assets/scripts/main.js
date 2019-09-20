@@ -51,3 +51,11 @@ $('img.editable-svg').each(function() {
         $img.replaceWith($svg);
     }, 'xml');
 });
+
+$('.hamburger').on('click', function() {
+    $('body').toggleClass('offcanvas-active');
+})
+
+$('.off-canvas .close-button').on('click', function() {
+    $('body').removeClass('offcanvas-active');
+})

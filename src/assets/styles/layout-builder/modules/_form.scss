@@ -1,33 +1,89 @@
 .module.form {
 
-    [type='text'],
-    [type='password'],
-    [type='date'],
-    [type='datetime'],
-    [type='datetime-local'],
-    [type='month'],
-    [type='week'],
-    [type='email'],
-    [type='number'],
-    [type='search'],
-    [type='tel'],
-    [type='time'],
-    [type='url'],
-    [type='color'],
-    textarea {
+    //overwrite gravity forms styles
+    .gform_wrapper {
+        margin: 0;
+    }
+
+    body .gform_wrapper .top_label div.ginput_container {
+        margin: 0;
+    }
+
+    body .gform_wrapper ul li.gfield {
+        margin-top: rem-calc(12);
+
+        @include breakpoint(medium) {
+            padding-right: rem-calc(16);
+        }
+    }
+
+    .gform_wrapper ul.gform_fields {
+        @include breakpoint(medium) {
+            margin-right: rem-calc(-16) !important;
+        }
+    }
+
+    body .gform_wrapper ul li.gfield:first-child {
+        margin-top: 0;
+    }
+
+    .gform_wrapper .gform_footer {
+        margin: 0;
+        padding: 0;
+        margin-top: rem-calc(12);
+    }
+
+    .gform_wrapper .gform_footer input.button,
+    .gform_wrapper .gform_footer input[type=submit],
+    .gform_wrapper .gform_page_footer input.button,
+    .gform_wrapper .gform_page_footer input[type=submit] {
+        margin: 0;
+    }
+
+    .gform_wrapper .top_label div.ginput_container {
+        margin-top: rem-calc(7);
+    }
+
+    //layout styles
+    .gform_fields {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gfield {
+        width: 100%;
+
+        @include breakpoint(medium) {
+            &.half-width {
+                width: 50%;
+            }
+        }
+    }
+
+    .gform_wrapper ul li.gfield {
+        margin-top: 0;
+        margin-bottom: rem-calc(12);
+    }
+
+    //inputs styles
+    .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type='file']),
+    .gform_wrapper select,
+    .gform_wrapper textarea {
+        margin: 0;
 
         &:focus {}
 
         &::placeholder {
-            color: $primary-font-color;
+            color: inherit;
         }
     }
 
-    textarea {
+    .gform_wrapper textarea {
         height: auto;
     }
 
-    //style input type="file"
+
+    //file input styles 
     .input-file {
         opacity: 0;
 
@@ -65,7 +121,21 @@
         }
     }
 
-    .gform_wrapper {
-        margin: 0;
+    //datepicker input styles
+    .ginput_container_date {
+        position: relative;
+
+        .ui-datepicker-trigger {
+            position: absolute;
+            right: rem-calc(12);
+            top: 50%;
+            transform: translateY(-50%);
+            width: rem-calc(24) !important;
+            height: auto !important;
+        }
+
+        .datepicker_with_icon {
+            padding-right: rem-calc(40) !important;
+        }
     }
 }

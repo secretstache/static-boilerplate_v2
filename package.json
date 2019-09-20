@@ -66,6 +66,5 @@
     },
     "bin": {
         "ssm": "./ssm/ssm.js"
-    },
-    "private": true
+    }
 }
