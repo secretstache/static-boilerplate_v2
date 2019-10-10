@@ -11,4 +11,41 @@
     .flex-video {
         margin-bottom: 0;
     }
+
+    .video-wrapper {
+        position: relative;
+        border-radius: 2px;
+
+        &:before {
+            content: '';
+            @include overlay();
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(28, 28, 28, 0.72));
+            z-index: 1;
+        }
+
+        &.playing {
+            .play-button {
+                display: none;
+            }
+        }
+    }
+
+    .play-button {
+        display: block;
+        width: rem-calc(50);
+        height: rem-calc(50);
+        background: url(../images/play-button.svg) no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 2;
+
+        @include breakpoint(medium) {
+            width: rem-calc(95);
+            height: rem-calc(95);
+        }
+    }
 }

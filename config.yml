@@ -31,10 +31,10 @@ PATHS:
     - "node_modules/motion-ui/src"
   sassEntries: 
     - "src/assets/styles/main.scss"
-    - "src/assets/styles/layout-builder/components/*.scss"
+    - "src/assets/styles/layout-builder/modules/*.scss"
     - "src/assets/styles/layout-builder/templates/*.scss"
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
     - "src/assets/scripts/main.js"
-    - "src/assets/scripts/layout-builder/components/*.js"
+    - "src/assets/scripts/layout-builder/modules/*.js"
     - "src/assets/scripts/layout-builder/templates/*.js"
