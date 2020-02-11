@@ -1,0 +1,15 @@
+.bg-dark {
+  background-color: rgb(17, 17, 54);
+  color: $white;
+
+  .module.form .gform_wrapper {
+    .validation_message {
+      color: $reverse-font-color;
+    }
+
+    .validation_error {
+      color: $reverse-font-color;
+      border-color: $reverse-font-color;
+    }
+  }
+}

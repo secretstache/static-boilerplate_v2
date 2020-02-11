@@ -3,6 +3,15 @@
     //overwrite gravity forms styles
     .gform_wrapper {
         margin: 0;
+
+        .validation_message {
+            color: $primary-font-color;
+        }
+
+        .validation_error {
+            color: $primary-font-color;
+            border-color: $primary-font-color;
+        }
     }
 
     body .gform_wrapper .top_label div.ginput_container {

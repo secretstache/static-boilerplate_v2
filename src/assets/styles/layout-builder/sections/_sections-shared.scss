@@ -3,6 +3,19 @@ section.content-block {
     @include responsive-margin("top");
     position: relative;
     z-index: 1;
+
+    @include breakpoint(small only) {
+        .grid-x .cell.medium-order-1 {
+            order: 1;
+            -webkit-box-ordinal-group: 1;
+            @include responsive-margin("bottom", $module-margin);
+        }
+
+        .grid-x .cell.medium-order-2 {
+            order: 2;
+            -webkit-box-ordinal-group: 2;
+        }
+    }
 }
 
 section[class^="bg-"],
