@@ -1,0 +1,12 @@
+<picture class="module picture{{#if classes}} {{classes}}{{/if}}">
+    {{#if src}}
+        {{#if image_mobile}}
+        <source media="(max-width: 768px)" srcset="{{root}}{{image_mobile}}">
+        {{/if}}
+        <img src="{{root}}{{src}}" alt="{{alt}}">
+    {{/if}}
+    {{#unless src}}
+        <source media="(max-width: 768px)" srcset="{{root}}assets/images/cms/placeholder.jpg">
+        <img src="{{root}}assets/images/cms/placeholder.jpg" alt="{{alt}}">
+    {{/unless}}
+</picture>

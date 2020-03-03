@@ -5,9 +5,6 @@
 
     {{#ifequal hero_unit_option 'bg_video'}}
         <div class="overlay"></div>
-    {{/ifequal}}
-
-    {{#ifequal hero_unit_option 'bg_video'}}
         <div class="video-overlay">
             <video muted autoplay playsinline loop>
                 <source src="{{root}}assets/video/PlaceholderVideo.mp4" type="video/mp4">
@@ -16,8 +13,8 @@
     {{/ifequal}}
 
     <div class="grid-container">
-        <div class="grid-x grid-margin-x align-center">
-            <div class="cell small-11 medium-12">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-12">
                 <header class="module stack-order-1">
                     <h1 class="headline">{{{hero_unit_headline}}}</h1>
                     {{#if hero_unit_subheadline }}

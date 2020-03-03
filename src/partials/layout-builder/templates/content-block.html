@@ -1,0 +1,18 @@
+<section class="content-block template-{{template}}{{#if classes}} {{classes}}{{/if}}{{#if bg_color}} bg-{{bg_color}}{{/if}}{{#if bg_image}} bg-image{{/if}}{{#if bg_video}} bg-video{{/if}}"{{#if bg_image}} style="background-image:url({{root}}{{bg_image}});"{{/if}} >
+    {{#if bg_image}}
+        <div class="overlay"></div>
+    {{/if}}
+
+    {{#if bg_video}}
+        <div class="overlay"></div>
+        <div class="video-overlay">
+            <video muted autoplay playsinline loop>
+                <source src="{{root}}assets/video/PlaceholderVideo.mp4" type="video/mp4">
+            </video>
+        </div>
+    {{/if}}
+
+    {{#if @partial-block}}
+        {{> @partial-block }}
+    {{/if}}
+</section>

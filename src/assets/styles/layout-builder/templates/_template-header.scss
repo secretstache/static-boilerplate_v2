@@ -1,4 +1,6 @@
-header.module {
+header.section-header {
+    @include responsive-margin("bottom", $module-margin * 2);
+
     &.align-center {
         text-align: center;
     }

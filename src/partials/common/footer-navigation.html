@@ -1,3 +1,16 @@
 <ul class="menu vertical">
-   
+    {{#each common.footer-navigation}}
+        <li class="menu-item {{#ifpage link}} current-menu-item{{/ifpage}}{{#if classes}} {{classes}}{{/if}}">
+            <a href="{{root}}{{link}}.html">{{text}}</a>
+            {{#if submenu }}
+                <ul class="submenu menu">
+                    {{#each submenu-items}}
+                        <li class="menu-item {{#ifpage link}} current-menu-item{{/ifpage}}{{#if classes}} {{classes}}{{/if}}">
+                            <a href="{{root}}{{submenu-link}}.html">{{submenu-text}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+        </li>
+    {{/each}}
 </ul>

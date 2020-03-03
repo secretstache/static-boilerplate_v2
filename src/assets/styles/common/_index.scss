@@ -59,8 +59,21 @@ a.skip-main:active {
     z-index: 9999;
 }
 
+p {
+    @include responsive-margin('bottom', $module-margin);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .dropdown.menu>li>a,
 .menu .active>a {
     background: inherit;
     color: inherit;
+}
+
+.grid-container {
+    max-width: rem-calc($container-width + $container-paddings * 2);
+    padding: rem-calc(0 $container-paddings);
 }

@@ -118,7 +118,7 @@ $breakpoint-classes: (small medium large);
 // -----------
 $grid-row-width: $global-width;
 $grid-column-count: 12;
-$grid-column-gutter: ( small: 20px,
+$grid-column-gutter: ( small: 30px,
 medium: 30px,
 );
 $grid-column-align-edge: true;
@@ -778,7 +778,7 @@ $topbar-unstack-breakpoint: medium;
 $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
-$grid-margin-gutters: ( small: 20px,
+$grid-margin-gutters: ( small: 30px,
 medium: 30px);
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;

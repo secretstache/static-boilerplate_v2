@@ -8,7 +8,8 @@ $reverse-font-color: $white;
 $headings-font-family: $primary-font-family;
 
 // Utility
-$max-width: 1140; //no units
+$container-width: 1140; //no units
+$container-paddings: 30;
 $base-padding: rem-calc(100);
 $base-margin: rem-calc(100);
 $module-margin: rem-calc(30);

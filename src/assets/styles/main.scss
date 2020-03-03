@@ -88,13 +88,12 @@
 @import 'layout-builder/cells/cells-shared';
 
 @import 'layout-builder/modules/modules-shared';
-@import 'layout-builder/modules/block-grid';
 @import 'layout-builder/modules/header';
-@import 'layout-builder/modules/section-header';
 @import 'layout-builder/modules/text-editor';
 @import 'layout-builder/modules/buttons';
 @import 'layout-builder/modules/video';
 @import 'layout-builder/modules/carousel';
-@import 'layout-builder/modules/image';
+@import 'layout-builder/modules/picture';
 @import 'layout-builder/modules/form';
-@import 'layout-builder/modules/icon-list';
+
+@import 'layout-builder/templates/template-header';
