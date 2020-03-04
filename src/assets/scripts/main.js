@@ -64,4 +64,4 @@ $(document).ready(function() {
     $('.off-canvas .close-button').on('click', function() {
         $('body').removeClass('offcanvas-active');
     });
-}
+})
